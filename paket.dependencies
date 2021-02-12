@@ -1,0 +1,60 @@
+source https://www.nuget.org/api/v2
+source https://api.nuget.org/v3/index.json
+storage: none
+
+nuget FSharp.Core ~> 5
+
+nuget Argu ~> 6
+nuget Expecto ~> 9
+nuget YoloDev.Expecto.TestSdk ~> 0.9
+nuget Microsoft.NET.Test.Sdk ~> 16
+nuget altcover ~> 7
+nuget Packaging.Targets ~> 0.1
+nuget FParsec ~> 1
+
+github vsapronov/FSharp.Json
+
+nuget Serilog.Settings.Configuration ~> 3 prerelease
+nuget Serilog.Sinks.Console ~> 4 prerelease
+nuget Serilog ~> 2 prerelease
+nuget DotNet.Glob ~> 3 prerelease
+
+// [ FAKE GROUP ]
+group Build
+    storage: none
+    source https://www.nuget.org/api/v2
+    source https://api.nuget.org/v3/index.json
+    nuget Argu
+    nuget Fake.IO.FileSystem ~> 5 prerelease
+    nuget Fake.Core.Target ~> 5 prerelease
+    nuget Fake.Core.ReleaseNotes ~> 5 prerelease
+    nuget FAKE.Core.Environment ~> 5 prerelease
+    nuget Fake.DotNet.Cli ~> 5 prerelease
+    nuget FAKE.Core.Process ~> 5 prerelease
+    nuget Fake.DotNet.AssemblyInfoFile ~> 5 prerelease
+    nuget Fake.Tools.Git ~> 5 prerelease
+    nuget Fake.DotNet.Paket ~> 5 prerelease
+    nuget Fake.Api.GitHub ~> 5 prerelease
+    nuget Fake.BuildServer.AppVeyor ~> 5 prerelease
+    nuget Fake.BuildServer.Travis ~> 5 prerelease
+    nuget Fantomas ~> 4 prerelease
+    nuget Fantomas.Extras
+
+group Docs
+    storage: none
+    source https://www.nuget.org/api/v2
+    source https://api.nuget.org/v3/index.json
+    nuget Argu
+    nuget FSharp.Core
+    nuget Fake.IO.FileSystem ~> 5 prerelease
+    nuget FAKE.Core.Environment ~> 5 prerelease
+    nuget Fake.DotNet.Cli ~> 5 prerelease
+    nuget FSharp.Formatting ~> 4 prerelease
+    nuget FSharp.Literate ~> 4 prereleaase
+    nuget Fable.React
+
+group Analyzers
+    source https://www.nuget.org/api/v2
+    source https://api.nuget.org/v3/index.json
+    nuget BinaryDefense.FSharp.Analyzers.Hashing ~> 0.2
+

@@ -1,0 +1,8 @@
+FSharp.Core
+Argu
+Packaging.Targets
+FParsec
+Serilog
+Serilog.Settings.Configuration
+Serilog.Sinks.Console
+DotNet.Glob
